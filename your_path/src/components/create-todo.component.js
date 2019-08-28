@@ -93,7 +93,7 @@ export default class CreateTodo extends Component {
                                 onChange={this.onChangeTodoPriority} />
                         </div>
                         <div>
-                            <input type="submit" value="Create Request" />
+                            <input type="submit" value="Create Todo" />
                         </div>
                     </div>
                 </form>
