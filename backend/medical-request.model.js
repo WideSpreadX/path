@@ -16,4 +16,4 @@ let MedicalRequest = new Schema({
     }
 });
 
-module.exports = mongoose.model('MedicalRequest', MedicalRequest);
+module.exports = mongoose.model('MedicalRequest', MedicalRequest); 

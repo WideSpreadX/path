@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -17,6 +18,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow-x: hidden;
 }
 
 .App-link {
@@ -31,27 +33,89 @@
     transform: rotate(360deg);
   }
 }
-
-
+nav {
+  width: 110vw;
+  margin-left: -5vw;
+}
+nav ul {
+  padding: 15px;
+  border: solid 2px white;
+  margin-top: 40px;
+  height: 65px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px white, 0 0 10px black;
+}
 nav li {
+  text-shadow: 1px 1px 3px lightskyblue;
+  text-align: center;
   float: left;
   list-style: none;
-  font-size: 40px;
+  line-height: 55px;
   width: 33%;
-  background: lime;
+  font-size: 36px;
+  background: rgba(34, 34, 34, 0.11);
+  margin-top: 5px;
+}
+nav li a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+nav li a:hover {
+  color: rgb(83, 144, 214);
+  text-shadow: 1px 1px 3px white;
+  background: rgba(255, 255, 255, 0.541);
+  box-shadow: inset 0 0 16px white, 0 0 5px black;
+}
+
+nav li:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+nav li:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .jonnyo {
   width: 100%;
   height: 100%;
-  background: blue;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.712);
+  box-shadow: 0 0 4px white, inset 0 0 20px white;
+  color: rgb(50, 89, 121);
+  text-shadow: 0 0 2px rgb(102, 100, 100);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px #444, 0 0 4px black;
   z-index: 1000;
 }
 .jonnyomg {
   width: 100%;
   height: 100%;
-  background: blue;
-  padding: 20px;
+  background: rgba(136, 38, 38, 0.664);
+  border: solid 1px white;
+  box-shadow: 0 0 10px black, inset 0 0 8px white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.jonnyomg-counselor {
+  width: 100%;
+  height: 100%;
+  background: rgba(61, 131, 221, 0.664);
+  border: solid 1px white;
+  box-shadow: 0 0 10px black, inset 0 0 8px white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.jonnyomg-lawyer {
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 148, 50, 0.664);
+  border: solid 1px white;
+  box-shadow: 0 0 10px black, inset 0 0 8px white;
+  border-radius: 5px;
   z-index: 1000;
 }
 form {
@@ -64,7 +128,7 @@ form {
   box-shadow: inset 0 0 5px white, 0 0 5px black;
   padding: 2rem;
   margin-top: 40px;
-
+  
 }
 .form-group {
   width: 90%;
@@ -94,4 +158,126 @@ form {
   clear: both;
   float: none;
   display: inline-block;
+}
+
+/*----------------------------Response Tables-----------------------------------------*/
+.request-list {
+  width: 60vw;
+  height: 40vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.request-list h3 {
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+}
+/*++++++++++++++++  Todo Table*/
+.todo-table {
+  box-shadow: 0 0 15px black, inset 0 0 20px black;
+  width: 55vw;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.todo-table>tbody {
+  width: 50vw;
+  height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+tr {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+tr:hover {
+  background: white;
+  color: rgb(17, 89, 172);
+}
+tr>td:hover {
+  color: rgb(17, 89, 172);
+  cursor: pointer;
+}
+th {
+  font-size: 28px;
+  margin: 10px;
+  padding: 10px;
+  background: rgba(34, 110, 173, 0.664);
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px black, 0 0 3px black;
+  color: #222;
+  text-shadow: 0 0 2px white;
+}
+td {
+  font-size: 24px;
+  color: white;
+  background: #3189ac60;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px black, inset 0 0 4px rgb(47, 78, 124);
+  margin: 5px;
+  visibility: visible;
+}
+td:first-of-type {
+  visibility: visible;
+  font-size: 26px;
+}
+
+td a {
+  color: rgb(17, 89, 172);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+/*++++++++++  Medical Request Table */
+.medical-response {
+  width: 90vw;
+  height: auto;
+  overflow: hidden;
+  margin-left: 5vw;
+  margin-top: 4vh;
+  border-top: solid 5px white;
+  border-bottom: solid 5px white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray, inset 0 0 5px white;
+  padding-bottom: 30px;
+}
+.medical-response h3 {
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+  padding: 20px;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-size: 36px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 12px rgb(255, 255, 255);
+  box-shadow: 0 0 5px black, inset 1px 2px 10px rgba(255, 255, 255, 0.699);
+  background: rgba(190, 56, 56, 0.24);
+}
+.medical-request-table {
+  width: 90%;
+  margin-left: 5%;
+}
+.medical-request-table tr:hover {
+  background: white;
+}
+.medical-request-table th {
+  background: rgba(151, 15, 15, 0.61);
+}
+.medical-request-table td {
+  color: red;
+  text-shadow: 0 0 2px white;
 }

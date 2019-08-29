@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const MedicalRequest = props => (
@@ -17,38 +17,38 @@ export default class MedicalRequestList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {medical_requests: []};
+        this.state = { medical_requests: [] };
     }
 
     componentDidMount() {
         axios.get('http://localhost:4000/medical-requests/medical-requests')
             .then(res => {
-                this.setState({medical_requests: res.data});
+                this.setState({ medical_requests: res.data });
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 console.log(error)
             })
     }
 
     medicalRequestList() {
-        return(this.state.medical_requests.map(function(currentMedicalRequest, i) {
-            return <MedicalRequest medical_request={currentMedicalRequest} key={i}/>;
+        return (this.state.medical_requests.map(function (currentMedicalRequest, i) {
+            return <MedicalRequest medical_request={currentMedicalRequest} key={i} />;
         })
         )
     }
 
     render() {
         return (
-            <div>
+            <div className="medical-response">
                 <h3>Medical Request List</h3>
                 <table className="medical-request-table">
                     <thead>
-                    <tr>
-                        <th>Description</th>
-                        <th>Responsible</th>
-                        <th>Priority</th>
-                        <th>Actions</th>
-                    </tr>
+                        <tr>
+                            <th>Description</th>
+                            <th>Responsible</th>
+                            <th>Priority</th>
+                            <th>Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {this.medicalRequestList()}
