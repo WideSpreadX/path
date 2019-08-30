@@ -21,7 +21,7 @@ connection.once('open', function () {
     console.log("Connection to MongoDB Successful");
 })
 
-todoRoutes.route('/todos').get(function (req, res) {
+todoRoutes.route('/').get(function (req, res) {
     Todo.find(function (err, todos) {
         if (err) {
             console.log(err);
