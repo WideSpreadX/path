@@ -28,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/WideSpreadX/path/issues"
   },
-  "homepage": "https://github.com/WideSpreadX/path#readme"
+  "homepage": "https://github.com/WideSpreadX/path#readme",
+  "success_url": "/todos"
 }
