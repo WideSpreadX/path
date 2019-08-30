@@ -5,7 +5,7 @@
     "node": "v10.15.0"
   },
   "description": "An application for inmates that are currently incarcerated or transitioning back into society to help them with anything we can help with",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,5 @@
   "bugs": {
     "url": "https://github.com/WideSpreadX/path/issues"
   },
-  "homepage": "https://github.com/WideSpreadX/path#readme",
-  "success_url": "/todos"
+  "homepage": "https://github.com/WideSpreadX/path#readme"
 }
