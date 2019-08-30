@@ -7,14 +7,14 @@ const todoRoutes = express.Router();
 const medicalRequestRoutes = express.Router();
 const counselorRequestRoutes = express.Router();
 const lawyerRequestRoutes = express.Router();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 let Todo = require('./todo.model');
 
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/todos', { useNewUrlParser: true });
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds123698.mlab.com:23698/heroku_25q3k83c', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -180,7 +180,7 @@ app.use('/counselor-requests', counselorRequestRoutes);
 let LawyerRequest = require('./lawyer-request.model');
 
 
-counselorRequestRoutes.route('/lawyer-requests').get(function (req, res) {
+counselorRequestRoutes.route('/lawyer-requests-list').get(function (req, res) {
     LawyerRequest.find(function (err, lawyer_request) {
         if (err) {
             console.log(err);
@@ -198,9 +198,9 @@ lawyerRequestRoutes.route('/lawyer-requests/:id').get(function (req, res) {
 });
 
 lawyerRequestRoutes.route('/lawyer-requests-create').post(function (req, res) {
-    let lawyerrequest = new LawyerRequest(req.body);
-    lawyerrequest.save()
-        .then(lawyerrequest => {
+    let lawyerrequests = new LawyerRequest(req.body);
+    lawyerrequests.save()
+        .then(lawyerrequests => {
             res.status(200).json({ 'lawyer_request': 'counselor_request added successfully' });
         })
         .catch(err => {
@@ -217,7 +217,7 @@ lawyerRequestRoutes.route('/lawyer-requests-update/:id').post(function (req, res
         lawyer_requests.lawyer_request_sresponsible = req.body.lawyer_request_responsible;
         lawyer_requests.lawyer_request_psriority = req.body.lawyer_request_priority;
         lawyer_requests.lawyer_request_cosmpleted = req.body.lawyer_request_completed;
-        lawyer_requests.save().then(counselor_request => {
+        lawyer_requests.save().then(lawyer_request => {
             res.json('Lawyer Request updated');
         })
             .catch(err => {
@@ -226,7 +226,7 @@ lawyerRequestRoutes.route('/lawyer-requests-update/:id').post(function (req, res
     });
 });
 
-app.use('/lawyer-requests', lawyerRequestRoutes);
+app.use('/lawyer-requests-list', lawyerRequestRoutes);
 //===================================================================================================================================================================================
 //===================================================================================================================================================================================
 //===================================================================================================================================================================================

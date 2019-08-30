@@ -14,8 +14,8 @@ import CreateCounselorRequest from "./components/create-counselor-request.compon
 import CounselorRequestList from "./components/Counselor-request-list.component";
 
 //--------------------Lawyer Requests---------------------------------
-import LawyerRequestList from './components/Lawyer-request-list.component';
 import CreateLawyerRequest from './components/create-lawyer-request.component';
+import LawyerRequestList from './components/Lawyer-request-list.component';
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
         <div>
           <nav>
             <ul>
-              <li><Link className="jonnyomg-lawyer" to="/lawyer-requests">All Lawyer Requests</Link></li>
+              <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-list">All Lawyer Requests</Link></li>
               <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-create">New Lawyer Request</Link></li>
               <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-edit/:id">Edit Lawyer Request</Link></li>
             </ul>
