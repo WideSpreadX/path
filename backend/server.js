@@ -14,7 +14,7 @@ let Todo = require('./todo.model');
 app.use(cors());
 app.use(bodyParser.json());
 //heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c
-mongoose.connect('mongodb://localhost/todos', { useNewUrlParser: true });
+mongoose.connect('heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c/todos', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
