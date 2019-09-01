@@ -4,6 +4,7 @@
   "description": "backend to myPath",
   "main": "index.js",
   "scripts": {
+    "server": "node /backend/server.js, node /backend/server2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jonny O",
