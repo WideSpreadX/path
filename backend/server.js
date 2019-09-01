@@ -13,8 +13,8 @@ let Todo = require('./todo.model');
 
 app.use(cors());
 app.use(bodyParser.json());
-
-mongoose.connect('mongodb://heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c', { useNewUrlParser: true });
+//heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c
+mongoose.connect('mongodb://localhost/todos', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -180,7 +180,7 @@ app.use('/counselor-requests', counselorRequestRoutes);
 let LawyerRequest = require('./lawyer-request.model');
 
 
-counselorRequestRoutes.route('/lawyer-requests-list').get(function (req, res) {
+lawyerRequestRoutes.route('/lawyer-requests').get(function (req, res) {
     LawyerRequest.find(function (err, lawyer_request) {
         if (err) {
             console.log(err);
@@ -198,9 +198,9 @@ lawyerRequestRoutes.route('/lawyer-requests/:id').get(function (req, res) {
 });
 
 lawyerRequestRoutes.route('/lawyer-requests-create').post(function (req, res) {
-    let lawyerrequests = new LawyerRequest(req.body);
-    lawyerrequests.save()
-        .then(lawyerrequests => {
+    let lawyerrequest = new LawyerRequest(req.body);
+    lawyerrequest.save()
+        .then(lawyerrequest => {
             res.status(200).json({ 'lawyer_request': 'counselor_request added successfully' });
         })
         .catch(err => {
@@ -214,9 +214,9 @@ lawyerRequestRoutes.route('/lawyer-requests-update/:id').post(function (req, res
             res.status(404).send('data is not found');
         else
             lawyer_requests.counselor_request_description = req.body.lawyer_request_description;
-        lawyer_requests.lawyer_request_sresponsible = req.body.lawyer_request_responsible;
-        lawyer_requests.lawyer_request_psriority = req.body.lawyer_request_priority;
-        lawyer_requests.lawyer_request_cosmpleted = req.body.lawyer_request_completed;
+        lawyer_requests.lawyer_request_responsible = req.body.lawyer_request_responsible;
+        lawyer_requests.lawyer_request_priority = req.body.lawyer_request_priority;
+        lawyer_requests.lawyer_request_completed = req.body.lawyer_request_completed;
         lawyer_requests.save().then(lawyer_request => {
             res.json('Lawyer Request updated');
         })
@@ -226,7 +226,7 @@ lawyerRequestRoutes.route('/lawyer-requests-update/:id').post(function (req, res
     });
 });
 
-app.use('/lawyer-requests-list', lawyerRequestRoutes);
+app.use('/lawyer-requests', lawyerRequestRoutes);
 //===================================================================================================================================================================================
 //===================================================================================================================================================================================
 //===================================================================================================================================================================================

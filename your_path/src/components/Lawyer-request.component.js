@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const LawyerRequest = props => (
     <tr>
-        <td>{props.lawyer_requests.lawyer_request_description}</td>
-        <td>{props.lawyer_requests.lawyer_request_responsiblity}</td>
-        <td>{props.lawyer_requests.lawyer_request_priority}</td>
+        <td>{props.lawyer_request.lawyer_request_description}</td>
+        <td>{props.lawyer_request.lawyer_request_responsiblity}</td>
+        <td>{props.lawyer_request.lawyer_request_priority}</td>
         <td>
             {/* <Link to={"/medical-requests/edit/"+props.medical_requests._id}>Edit</Link> */}
         </td>
@@ -21,9 +21,9 @@ export default class LawyerRequestList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/lawyer-requests/lawyer-requests-list')
+        axios.get('http://localhost:4000/lawyer-requests/lawyer-requests')
             .then(res => {
-                this.setState({ lawyer_request: res.data });
+                this.setState({ lawyer_requests: res.data });
             })
             .catch(function (error) {
                 console.log(error)

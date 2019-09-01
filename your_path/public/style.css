@@ -16,6 +16,7 @@ body {
 .background img {
     width: 100vw;
     height: 100vh;
+    opacity: 0.3;
 }
 
 /*Background Overlay*/
@@ -28,4 +29,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    background-image: radial-gradient(rgba(95, 131, 29, 0.315),rgba(90, 197, 170, 0.164),rgba(29, 77, 131, 0.034),rgba(29, 77, 131, 0.178),rgba(29, 77, 131, 0.336));
+}
+#background-overlay-clear {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -780;
+    background-image: radial-gradient(rgba(23, 27, 32, 0.336),rgba(29, 77, 131, 0.027),rgba(29, 77, 131, 0.062),rgba(32, 59, 90, 0.178),rgba(33, 49, 70, 0.336));
 }

@@ -80,10 +80,11 @@ nav li:last-of-type {
 }
 .jonnyo {
   width: 100%;
+  border: solid 1px white;
   height: 100%;
-  background: rgba(255, 255, 255, 0.712);
+  background: rgba(19, 18, 18, 0.411);
   box-shadow: 0 0 4px white, inset 0 0 20px white;
-  color: rgb(50, 89, 121);
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 2px rgb(102, 100, 100);
   padding-left: 10px;
   padding-right: 10px;
@@ -122,9 +123,9 @@ form {
   margin: 0 auto;
   width: 50vw;
   height: 50vh;
-  background: #444;
-  border: solid 1px black;
-  border-radius: 5px;
+  background: rgba(68, 68, 68, 0.5);
+  border: groove 2px white;
+  border-radius: 10px;
   box-shadow: inset 0 0 5px white, 0 0 5px black;
   padding: 2rem;
   margin-top: 40px;
@@ -132,17 +133,36 @@ form {
 }
 .form-group {
   width: 90%;
-  background: white;
+  margin-left: 5%;
+  height: 10%;
   display: inline-block;
 }
 .form-group>input {
   float: left;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 24px;
+  padding: 3px;
+  height: 60%;
+  line-height: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 0 4px white, 0 0 2px white;
+  background: rgba(255, 255, 255, 0.384);
+  border: groove 2px white;
 }
 .form-group>label {
   float: left;
+  margin-left: 10px;
+  font-size: 30px;
 }
-.group>label {
-  float: left;
+.group {
+  width: 100%;
+}
+.group>.radio {
+  width:30%;
+}
+.radio {
+  width: 30%;
 }
 .personel {
   height: 150px;
@@ -150,9 +170,6 @@ form {
 }
 .reason {
   height: 150px;
-}
-.radio {
-  float: left;
 }
 .btn {
   clear: both;
@@ -175,6 +192,8 @@ form {
   width: 100%;
   font-size: 32px;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 2px black;
 }
 /*++++++++++++++++  Todo Table*/
 .todo-table {
@@ -222,12 +241,15 @@ th {
 td {
   font-size: 24px;
   color: white;
-  background: #3189ac60;
+  background: #7b929b3d;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 4px black, inset 0 0 4px rgb(47, 78, 124);
   margin: 5px;
   visibility: visible;
+}
+td:hover {
+  box-shadow: inset 0 0 10px white;
 }
 td:first-of-type {
   visibility: visible;
@@ -254,17 +276,19 @@ td a {
   padding-bottom: 30px;
 }
 .medical-response h3 {
-  color: black;
-  width: 80%;
-  margin-left: 10%;
-  padding: 20px;
-  border: solid 1px black;
+  color: transparent;
+  width: 95%;
+  margin-left: 2.5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: solid 5px white;
+  border-bottom: solid 5px white;
   border-radius: 5px;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bolder;
   text-align: center;
-  text-shadow: 0 0 12px rgb(255, 255, 255);
-  box-shadow: 0 0 5px black, inset 1px 2px 10px rgba(255, 255, 255, 0.699);
+  text-shadow: 0 0 4px rgb(255, 255, 255);
+  box-shadow: 0 0 3px white, inset 1px 2px 10px rgba(255, 255, 255, 0.699);
   background: rgba(190, 56, 56, 0.24);
 }
 .medical-request-table {
@@ -272,10 +296,15 @@ td a {
   margin-left: 5%;
 }
 .medical-request-table tr:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.267);
+}
+.medical-request-table tr>td:hover {
+  color: red;
+  text-shadow: 0 0 2px black;
 }
 .medical-request-table th {
   background: rgba(151, 15, 15, 0.61);
+  color: transparent;
 }
 .medical-request-table td {
   color: red;

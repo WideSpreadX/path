@@ -93,7 +93,7 @@ export default class CreateLawyerRequest extends Component {
                                 onChange={this.onChangeLawyerRequestPriority} />
                         </div>
                         <div>
-                            <input className="btn counselor-a" type="submit" value="Create Request" />
+                            <input className="btn lawyer-a" type="submit" value="Create Request" />
                         </div>
                     </div>
                 </form>

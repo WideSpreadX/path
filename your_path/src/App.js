@@ -7,7 +7,6 @@ import EditTodo from "./components/edit-todo.component";
 import TodosList from "./components/Todos-list.component";
 //--------------------Medical Requests---------------------------------
 import CreateMedicalRequest from "./components/create-medical-request.component";
-import EditMedicalRequest from "./components/edit-medical-request.component";
 import MedicalRequestsList from "./components/Medical-request-list.component";
 //--------------------Counselor Requests---------------------------------
 import CreateCounselorRequest from "./components/create-counselor-request.component";
@@ -15,7 +14,7 @@ import CounselorRequestList from "./components/Counselor-request-list.component"
 
 //--------------------Lawyer Requests---------------------------------
 import CreateLawyerRequest from './components/create-lawyer-request.component';
-import LawyerRequestList from './components/Lawyer-request-list.component';
+import LawyerRequestList from './components/Lawyer-request.component';
 
 
 function App() {
@@ -68,7 +67,7 @@ function App() {
         <div>
           <nav>
             <ul>
-              <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-list">All Lawyer Requests</Link></li>
+              <li><Link className="jonnyomg-lawyer" to="/lawyer-requests">All Lawyer Requests</Link></li>
               <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-create">New Lawyer Request</Link></li>
               <li><Link className="jonnyomg-lawyer" to="/lawyer-requests-edit/:id">Edit Lawyer Request</Link></li>
             </ul>
