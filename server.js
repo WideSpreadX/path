@@ -7,7 +7,7 @@ const todoRoutes = express.Router();
 const medicalRequestRoutes = express.Router();
 const counselorRequestRoutes = express.Router();
 const lawyerRequestRoutes = express.Router();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 let Todo = require('./todo.model');
 
