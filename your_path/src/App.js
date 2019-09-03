@@ -16,10 +16,26 @@ import CounselorRequestList from "./components/Counselor-request-list.component"
 import CreateLawyerRequest from './components/create-lawyer-request.component';
 import LawyerRequestList from './components/Lawyer-request.component';
 
+//--------------------jCoin---------------------------------
+import CreateJcoinRequest from './components/create-jcoin-request.component';
+import JcoinRequestList from './components/Jcoin-request.component';
+
 
 function App() {
   return (
     <Router>
+      <div className="main-user-menu">
+        <nav className="main-user-menu-nav">
+          <ul>
+            <li>Your Path</li>
+            <li>Medical</li>
+            <li>Bubble</li>
+            <li>Counselor</li>
+            <li>Court</li>
+            <li>The Outside</li>
+          </ul>
+        </nav>
+      </div>
       <div className="request-card">
         <div>
           <nav>
@@ -76,6 +92,19 @@ function App() {
       </div>
       <Route path="/lawyer-requests" exact component={LawyerRequestList} />
       <Route path="/lawyer-requests-create" component={CreateLawyerRequest} />
+      <div className="request-card">
+        <div>
+          <nav>
+            <ul>
+              <li><Link className="jonnyomg-jcoin" to="/jcoin-requests">Current Balance</Link></li>
+              <li><Link className="jonnyomg-jcoin" to="/jcoin-requests-create">Get jCoins</Link></li>
+              <li><Link className="jonnyomg-jcoin" to="/jcoin-requests-edit/:id">View Transactions</Link></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <Route path="/jcoin-requests" exact component={JcoinRequestList} />
+      <Route path="/jcoin-requests-create" component={CreateJcoinRequest} />
     </Router>
   );
 }

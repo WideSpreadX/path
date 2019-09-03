@@ -5,7 +5,7 @@ import axios from 'axios';
 const MedicalRequest = props => (
     <tr>
         <td>{props.medical_request.medical_request_description}</td>
-        <td>{props.medical_request.medical_request_responsiblity}</td>
+        <td>{props.medical_request.medical_request_responsible}</td>
         <td>{props.medical_request.medical_request_priority}</td>
         <td>
             {/* <Link to={"/medical-requests/edit/"+props.medical_requests._id}>Edit</Link> */}
@@ -31,7 +31,7 @@ export default class MedicalRequestList extends Component {
     }
 
     medicalRequestList() {
-        return (this.state.medical_requests.map(function (currentMedicalRequest, i) {
+        return (this.state.medical_request.map(function (currentMedicalRequest, i) {
             return <MedicalRequest medical_request={currentMedicalRequest} key={i} />;
         })
         )

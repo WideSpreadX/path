@@ -5,7 +5,7 @@ import axios from 'axios';
 const LawyerRequest = props => (
     <tr>
         <td>{props.lawyer_request.lawyer_request_description}</td>
-        <td>{props.lawyer_request.lawyer_request_responsiblity}</td>
+        <td>{props.lawyer_request.lawyer_request_responsible}</td>
         <td>{props.lawyer_request.lawyer_request_priority}</td>
         <td>
             {/* <Link to={"/medical-requests/edit/"+props.medical_requests._id}>Edit</Link> */}
