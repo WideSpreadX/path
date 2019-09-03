@@ -7,7 +7,7 @@
   "description": "An application for inmates that are currently incarcerated or transitioning back into society to help them with anything we can help with",
   "main": "index.html",
   "scripts": {
-    "start": "cd your_path, npm start",
+    "start": "npm start",
     "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
