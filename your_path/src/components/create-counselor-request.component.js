@@ -50,7 +50,7 @@ export default class CreateCounselorRequest extends Component {
             counselor_request_completed: this.state.counselor_request_completed
         }
 
-        axios.post('http://localhost:4000/counselor-requests/counselor-requests-create', newCounselorRequest)
+        axios.post('heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c/counselor-requests/counselor-requests-create', newCounselorRequest)
             .then(res => console.log(res.data));
 
         this.setState({
