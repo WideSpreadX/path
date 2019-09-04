@@ -21,7 +21,7 @@ export default class MedicalRequestList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/medical-requests/medical-requests')
+        axios.get('heroku_25q3k83c:gpf46trvu55u846vqmaeto4ojv@ds123698.mlab.com:23698/heroku_25q3k83c/counselor-requests/counselor-requests-create/medical-requests/medical-requests')
             .then(res => {
                 this.setState({ medical_requests: res.data });
             })
