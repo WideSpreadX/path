@@ -1,0 +1,31 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: -999;
+    background: #444;
+}
+.background img {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Background Overlay*/
+#background-overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.151);
+    z-index: -988;
+    box-shadow: inset 0 -30px 100px rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+}

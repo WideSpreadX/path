@@ -1,2 +1,0 @@
-jcoin_request_
-     db.jcoin_request.insertOne({jcoin_request_product_number: 100, jcoin_request_product_name: "One Coin", jcoin_request_value: 1.00, jcoin_request_routing: 1234567890, jcoin_request_transfer: true, jcoin_request_owner: "Jonny O", jcoin_request_owner_id: 075234765, jcoin_request_owner_email: "widespread.main@gmail.com", jcoin_request_transfer_id: 8743546, jcoin_request_sale_confirmation_number: 654412641, jcoin_request_venmo_account_number: 654135, jcoin_request_venmo_account_f_name: "Jonathan", jcoin_request_venmo_account_l_name: "Olson"});
